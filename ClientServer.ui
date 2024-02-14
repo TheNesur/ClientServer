@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientServerClass</class>
+ <widget class="QMainWindow" name="ClientServerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>822</width>
+    <height>578</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ClientServer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>821</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="MainWidget">
+     <widget class="QTabWidget" name="tabWidgetLogs">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>621</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="LogClient">
+       <attribute name="title">
+        <string>Log Client</string>
+       </attribute>
+       <widget class="QTextBrowser" name="textBrowserClient">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>591</width>
+          <height>251</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="LogServer">
+       <attribute name="title">
+        <string>Log Server</string>
+       </attribute>
+       <widget class="QTextBrowser" name="textBrowserServer">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>591</width>
+          <height>251</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBoxSendData">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>450</y>
+        <width>611</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Send Data</string>
+      </property>
+      <widget class="QPlainTextEdit" name="plainTextEditSendClient">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>491</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="plainTextEditSendServer">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>491</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonSendToClient">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>70</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Send To Client</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonSendToServer">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>20</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Send To Server</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonClearLogClient">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>40</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ClearLog Client</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonClearLogServer">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>90</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ClearLog Server</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBoxConfiguration">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>319</y>
+        <width>331</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Configuration</string>
+      </property>
+      <widget class="QPushButton" name="pushButtonConnectClient">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Connect Client</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonStartServer">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>30</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Start Server</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonConfigurationServerClient">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>311</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Configuration Server/Client</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBoxListClients">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>30</y>
+        <width>161</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>Clients</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QComboBox" name="comboBoxListClients">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelListIP">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IP: [IP]</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelListPort">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Port: [Port]</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelIsConnected">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Status : [STATUS]</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTabWidget" name="tabWidgetStatusServerClient">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>320</y>
+        <width>231</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="StatusClient">
+       <attribute name="title">
+        <string>Client</string>
+       </attribute>
+       <widget class="QLabel" name="labelStatusIPClient">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>IP : [IP]</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStatusPortClient">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Port : [PORT]</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="StatusServer">
+       <attribute name="title">
+        <string>Server</string>
+       </attribute>
+       <widget class="QLabel" name="labelStatusIPPortServer">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>[IP]:[PORT]</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStatusServer">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Server Status : [STATUS]</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ConfigurationServer">
+     <widget class="QGroupBox" name="groupBoxServer">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>171</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Configuration Server</string>
+      </property>
+      <widget class="QPushButton" name="pushButtonValideStatusServer">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>90</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SAVE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditIPServer">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>172.17.4.89</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditPortServer">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>60</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>5050</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelIPServer">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IP:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelPortServer">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Port:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBoxClient">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>171</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Configuration Client</string>
+      </property>
+      <widget class="QPushButton" name="pushButtonValideStatusClient">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>90</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SAVE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditIPClient">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>172.17.4.89</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditPortClient">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>60</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>5050</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelIPClient">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IP:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelPortClient">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Port:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButtonReturnMainWidget">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>170</y>
+        <width>341</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Return to Main Widget</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ClientServer.qrc"/>
+ </resources>
+ <connections/>
+</ui>
